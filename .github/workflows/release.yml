@@ -1,0 +1,92 @@
+name: Release (GitHub Release & Extension Packages)
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Test, Package & Create GitHub Release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run Native Unit Tests (Quality Gate)
+        run: npm test
+
+      - name: Build & Package ZIP / XPI Archives
+        id: package
+        run: |
+          npm run package
+          VERSION=$(node -p "require('./package.json').version")
+          TAG_NAME="${GITHUB_REF_NAME}"
+          if [[ "$TAG_NAME" != v* ]]; then
+            TAG_NAME="v${VERSION}"
+          fi
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+          echo "TAG_NAME=$TAG_NAME" >> $GITHUB_OUTPUT
+          echo "CHROME_ZIP=dist/releases/history-guard-chrome-v${VERSION}.zip" >> $GITHUB_OUTPUT
+          echo "FIREFOX_ZIP=dist/releases/history-guard-firefox-v${VERSION}.zip" >> $GITHUB_OUTPUT
+          echo "FIREFOX_XPI=dist/releases/history-guard-firefox-v${VERSION}.xpi" >> $GITHUB_OUTPUT
+
+      - name: Generate Release Notes from CHANGELOG.md
+        id: notes
+        env:
+          VERSION: ${{ steps.package.outputs.VERSION }}
+        run: |
+          node << 'EOF'
+          const fs = require('fs');
+          const path = require('path');
+
+          const version = process.env.VERSION;
+          const changelog = fs.readFileSync('CHANGELOG.md', 'utf8').replace(/\r\n/g, '\n');
+
+          const escaped = version.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          const sectionRegex = new RegExp(`## \\[${escaped}\\][^\\n]*\\n([\\s\\S]*?)(?=\\n---\\s*\\n|\\n## \\[|$)`);
+          const match = changelog.match(sectionRegex);
+          const changelogBody = match ? match[1].trim() : '';
+
+          const installGuide = [
+            '---',
+            '',
+            '### 📦 安装说明 / Installation Guide',
+            '',
+            `- **Chrome / Edge / Brave** (\`history-guard-chrome-v${version}.zip\`): 下载并解压后，打开 \`chrome://extensions\` 或 \`edge://extensions\`，开启右上角 **开发者模式 (Developer mode)**，点击 **加载已解压的扩展程序 (Load unpacked)** 并选择解压文件夹即可。`,
+            `- **Firefox** (\`history-guard-firefox-v${version}.zip\` / \`.xpi\`):`,
+            '  - 正式版 Firefox：打开 `about:debugging#/runtime/this-firefox` -> 点击 **临时载入附加组件** -> 选择 `.zip` 或 `.xpi` 文件；',
+            '  - Firefox Developer Edition / Nightly（或关闭签名校验的浏览器）：可直接将 `.xpi` 文件拖入浏览器窗口安装。'
+          ].join('\n');
+
+          const finalNotes = changelogBody
+            ? `${changelogBody}\n\n${installGuide}`
+            : `Release v${version}\n\n${installGuide}`;
+
+          const notesPath = path.join(process.env.RUNNER_TEMP, 'release-notes.md');
+          fs.writeFileSync(notesPath, finalNotes, 'utf8');
+          console.log('Generated release notes:\n' + finalNotes);
+          EOF
+
+      - name: Create GitHub Release & Upload Packages
+        uses: softprops/action-gh-release@v2
+        with:
+          name: History Guard v${{ steps.package.outputs.VERSION }}
+          tag_name: ${{ steps.package.outputs.TAG_NAME }}
+          body_path: ${{ runner.temp }}/release-notes.md
+          files: |
+            ${{ steps.package.outputs.CHROME_ZIP }}
+            ${{ steps.package.outputs.FIREFOX_ZIP }}
+            ${{ steps.package.outputs.FIREFOX_XPI }}
+          draft: false
+          prerelease: false

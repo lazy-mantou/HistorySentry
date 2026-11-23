@@ -207,14 +207,12 @@ async function main() {
   const version = validateVersionSync();
   console.log(`🔍 Verified consistent version: v${version}`);
 
-  // 2. 检查 dist 是否存在，不存在则自动执行构建
+  // 2. 始终基于最新源码执行构建，防止打包到过期的 dist 产物
   const chromeDist = path.join(DIST_DIR, 'chrome');
   const firefoxDist = path.join(DIST_DIR, 'firefox');
-  if (!fs.existsSync(chromeDist) || !fs.existsSync(firefoxDist)) {
-    console.log('⚠️  dist artifacts missing, triggering build.js...');
-    const { execSync } = await import('child_process');
-    execSync('node build.js', { stdio: 'inherit', cwd: ROOT_DIR });
-  }
+  console.log('🔨 Running build.js to ensure fresh artifacts...');
+  const { execSync } = await import('child_process');
+  execSync('node build.js', { stdio: 'inherit', cwd: ROOT_DIR });
 
   // 3. 准备输出目录 dist/releases/
   if (!fs.existsSync(RELEASES_DIR)) {
@@ -223,16 +221,18 @@ async function main() {
 
   const targets = [
     {
-      platform: 'Chrome Web Store (Chromium)',
+      platform: 'Chrome / Edge (Chromium ZIP)',
       srcDir: chromeDist,
       outputFile: path.join(RELEASES_DIR, `history-guard-chrome-v${version}.zip`),
       filename: `history-guard-chrome-v${version}.zip`
     },
     {
-      platform: 'Firefox Add-ons (AMO Gecko)',
+      platform: 'Firefox (Gecko ZIP & XPI)',
       srcDir: firefoxDist,
       outputFile: path.join(RELEASES_DIR, `history-guard-firefox-v${version}.zip`),
-      filename: `history-guard-firefox-v${version}.zip`
+      filename: `history-guard-firefox-v${version}.zip`,
+      mirrorXpiFile: path.join(RELEASES_DIR, `history-guard-firefox-v${version}.xpi`),
+      mirrorXpiFilename: `history-guard-firefox-v${version}.xpi`
     }
   ];
 
@@ -242,12 +242,16 @@ async function main() {
     const savedPercent = ((1 - stats.zippedBytes / stats.originalBytes) * 100).toFixed(1);
 
     console.log(`   ✓ File:    dist/releases/${target.filename}`);
+    if (target.mirrorXpiFile) {
+      fs.copyFileSync(target.outputFile, target.mirrorXpiFile);
+      console.log(`   ✓ File:    dist/releases/${target.mirrorXpiFilename}`);
+    }
     console.log(`   ✓ Entries: ${stats.fileCount} files`);
     console.log(`   ✓ Size:    ${(stats.zippedBytes / 1024).toFixed(1)} KB (Raw: ${(stats.originalBytes / 1024).toFixed(1)} KB, -${savedPercent}%)`);
   }
 
   console.log('\n====================================================');
-  console.log('🎉 Store ZIP packages created successfully!');
+  console.log('🎉 Release packages (ZIP & XPI) created successfully!');
   console.log(`📂 Releases directory: dist/releases/`);
   console.log('====================================================\n');
 }

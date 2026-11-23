@@ -49,18 +49,16 @@ npm test
 2. [manifest.chrome.json](../../../manifest.chrome.json) 中的 `"version"`
 3. [manifest.firefox.json](../../../manifest.firefox.json) 中的 `"version"`
 
-### 步骤 4：执行构建与生成商店 ZIP 归档包
+### 步骤 4：执行构建与生成 ZIP / XPI 安装包
 运行原生构建与打包工具：
 ```bash
-# 1. 编译输出 Chromium 与 Gecko 产物至 dist/chrome 与 dist/firefox
-node build.js
-
-# 2. 自动化生成符合商店规范的 ZIP 归档包至 dist/releases/
+# 1. 运行 package.js（内部会自动调用 build.js 生成最新产物，并打包输出至 dist/releases/）
 node package.js
 ```
 * 验证生成产物：
-  - `dist/releases/history-guard-chrome-v<version>.zip`（用于 Chrome Web Store）
-  - `dist/releases/history-guard-firefox-v<version>.zip`（用于 Firefox AMO）
+  - `dist/releases/history-guard-chrome-v<version>.zip`（Chrome / Edge / Brave 安装包及商店提交包）
+  - `dist/releases/history-guard-firefox-v<version>.zip`（Firefox 商店提交包及 `about:debugging` 临时载入包）
+  - `dist/releases/history-guard-firefox-v<version>.xpi`（Firefox `.xpi` 安装包）
 * 产物内根目录直接为 `manifest.json`，无多余父层文件夹。
 
 ### 步骤 5：校验应用商店上架物料 (Publish Assets)
@@ -91,11 +89,11 @@ git commit -m "chore(release): bump version to X.Y.Z"
 git tag -a "vX.Y.Z" -m "Release vX.Y.Z"
 ```
 
-### 步骤 8：推送代码与 Tag 至远程仓库
-将本地发版提交与版本 Tag 推送至远程仓库归档：
+### 步骤 8：推送代码与 Tag 自动生成 GitHub Release
+将本地发版提交与版本 Tag 推送至远程仓库：
 ```bash
 git push origin master
 git push origin vX.Y.Z
 ```
-* 构建产物位于 `dist/releases/`（`history-guard-chrome-v<version>.zip` 与 `history-guard-firefox-v<version>.zip`），可直接在各大应用商店开发者控制台手动上传分发。
+* 推送 `v*` Tag 后，GitHub Actions（`.github/workflows/release.yml`）会自动运行全量单测、打包生成 `.zip` 与 `.xpi` 文件，并在仓库的 **Releases** 页面自动发布当前版本及附件下载，无需手动配置任何密钥。
 

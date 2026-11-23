@@ -94,7 +94,7 @@
 
 ### 4.2 Firefox Add-ons (AMO) 提交包
 - **打包源目录**：`dist/firefox/`
-- **结构要求**：打开 ZIP 包的根目录必须直接看到 `manifest.json`。
+- **输出格式**：`package.js` 同时生成 `history-guard-firefox-v<version>.zip` 与 `history-guard-firefox-v<version>.xpi`（两者二进制内容完全一致，根目录均直接暴露 `manifest.json`）。
 - **AMO 源码要求**：若 AMO 审核要求提供源码，需提供未压缩源代码并附带纯原生构建说明（仅需安装 Node.js 执行 `node build.js` 即可复现完全相同的构建产物）。
 
 ---
