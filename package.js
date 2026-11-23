@@ -200,7 +200,7 @@ function createZipArchive(sourceDir, outputZipPath) {
  */
 async function main() {
   console.log('====================================================');
-  console.log('📦 History Guard Extension Store Packager (Zero-Dependency)');
+  console.log('📦 HistorySentry Extension Store Packager (Zero-Dependency)');
   console.log('====================================================\n');
 
   // 1. 验证版本号一致性
@@ -223,16 +223,16 @@ async function main() {
     {
       platform: 'Chrome / Edge (Chromium ZIP)',
       srcDir: chromeDist,
-      outputFile: path.join(RELEASES_DIR, `history-guard-chrome-v${version}.zip`),
-      filename: `history-guard-chrome-v${version}.zip`
+      outputFile: path.join(RELEASES_DIR, `history-sentry-chrome-v${version}.zip`),
+      filename: `history-sentry-chrome-v${version}.zip`
     },
     {
       platform: 'Firefox (Gecko ZIP & XPI)',
       srcDir: firefoxDist,
-      outputFile: path.join(RELEASES_DIR, `history-guard-firefox-v${version}.zip`),
-      filename: `history-guard-firefox-v${version}.zip`,
-      mirrorXpiFile: path.join(RELEASES_DIR, `history-guard-firefox-v${version}.xpi`),
-      mirrorXpiFilename: `history-guard-firefox-v${version}.xpi`
+      outputFile: path.join(RELEASES_DIR, `history-sentry-firefox-v${version}.zip`),
+      filename: `history-sentry-firefox-v${version}.zip`,
+      mirrorXpiFile: path.join(RELEASES_DIR, `history-sentry-firefox-v${version}.xpi`),
+      mirrorXpiFilename: `history-sentry-firefox-v${version}.xpi`
     }
   ];
 

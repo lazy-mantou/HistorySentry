@@ -1,6 +1,6 @@
-# History Guard 打包与发布规范 (Release & Packaging Rules)
+# HistorySentry 打包与发布规范 (Release & Packaging Rules)
 
-本文档是 **History Guard** 项目进行正式版本打包、应用商店物料归档与发布交付的标准门禁与规范准则。在此代码库中触发打包分发或正式发版时，开发者与 AI Agent 必须严格遵守以下约定（注：项目文件夹保持 `HistGuard` 不变，对外产品及项目名统一使用 `History Guard`）。
+本文档是 **HistorySentry** 项目进行正式版本打包、应用商店物料归档与发布交付的标准门禁与规范准则。在此代码库中触发打包分发或正式发版时，开发者与 AI Agent 必须严格遵守以下约定（注：项目文件夹保持 `HistGuard` 不变，对外产品及项目名统一使用 `HistorySentry`）。
 
 ---
 
@@ -94,7 +94,7 @@
 
 ### 4.2 Firefox Add-ons (AMO) 提交包
 - **打包源目录**：`dist/firefox/`
-- **输出格式**：`package.js` 同时生成 `history-guard-firefox-v<version>.zip` 与 `history-guard-firefox-v<version>.xpi`（两者二进制内容完全一致，根目录均直接暴露 `manifest.json`）。
+- **输出格式**：`package.js` 同时生成 `history-sentry-firefox-v<version>.zip` 与 `history-sentry-firefox-v<version>.xpi`（两者二进制内容完全一致，根目录均直接暴露 `manifest.json`）。
 - **AMO 源码要求**：若 AMO 审核要求提供源码，需提供未压缩源代码并附带纯原生构建说明（仅需安装 Node.js 执行 `node build.js` 即可复现完全相同的构建产物）。
 
 ---

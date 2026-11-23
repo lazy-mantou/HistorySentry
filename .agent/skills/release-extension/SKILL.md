@@ -1,13 +1,13 @@
 ---
 name: release-extension
 description: >-
-  Use this skill when the user asks to release, publish, or package a new version of History Guard,
+  Use this skill when the user asks to release, publish, or package a new version of HistorySentry,
   bump the extension version, generate Chrome Web Store / Firefox AMO ZIP archives, or execute the milestone release workflow.
 ---
 
-# History Guard 发版与应用商店打包工作流 (Release & Packaging SOP)
+# HistorySentry 发版与应用商店打包工作流 (Release & Packaging SOP)
 
-本 Skill 是 **History Guard** 项目执行正式版本发布、产物校验与商店归档的标准操作指南（Runbook）。当用户请求发版、打包或提升版本号时，必须按以下步骤顺序严格执行。
+本 Skill 是 **HistorySentry** 项目执行正式版本发布、产物校验与商店归档的标准操作指南（Runbook）。当用户请求发版、打包或提升版本号时，必须按以下步骤顺序严格执行。
 
 ---
 
@@ -56,9 +56,9 @@ npm test
 node package.js
 ```
 * 验证生成产物：
-  - `dist/releases/history-guard-chrome-v<version>.zip`（Chrome / Edge / Brave 安装包及商店提交包）
-  - `dist/releases/history-guard-firefox-v<version>.zip`（Firefox 商店提交包及 `about:debugging` 临时载入包）
-  - `dist/releases/history-guard-firefox-v<version>.xpi`（Firefox `.xpi` 安装包）
+  - `dist/releases/history-sentry-chrome-v<version>.zip`（Chrome / Edge / Brave 安装包及商店提交包）
+  - `dist/releases/history-sentry-firefox-v<version>.zip`（Firefox 商店提交包及 `about:debugging` 临时载入包）
+  - `dist/releases/history-sentry-firefox-v<version>.xpi`（Firefox `.xpi` 安装包）
 * 产物内根目录直接为 `manifest.json`，无多余父层文件夹。
 
 ### 步骤 5：校验应用商店上架物料 (Publish Assets)

@@ -26,7 +26,7 @@ const testFiles = [
 ];
 
 console.log('\n========================================================');
-console.log('   🛡️  History Guard Automated Unit Test Suite');
+console.log('   🛡️  HistorySentry Automated Unit Test Suite');
 console.log('========================================================\n');
 
 const testArgs = ['--test', ...testFiles.map(f => path.join(__dirname, f))];

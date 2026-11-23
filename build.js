@@ -101,7 +101,7 @@ function getDirStats(dir) {
  */
 function build() {
   console.log('====================================================');
-  console.log('🛡️  History Guard Cross-Browser Extension Build Tool (Zero-Dependency)');
+  console.log('🛡️  HistorySentry Cross-Browser Extension Build Tool (Zero-Dependency)');
   console.log('====================================================\n');
 
   const startTime = Date.now();

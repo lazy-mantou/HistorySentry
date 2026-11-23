@@ -1,12 +1,12 @@
-# History Guard 开发者与智能体开发协作规范 (AGENTS.md)
+# HistorySentry 开发者与智能体开发协作规范 (AGENTS.md)
 
-本文档是 **History Guard** 项目的核心架构规范、开发流程指南与 Agent 协作准则。任何在此代码库中进行特性开发、缺陷修复或重构的开发者与 AI Agent，均须严格遵守以下约定（注：项目文件夹保持 `HistGuard` 不变，对外产品及项目名统一使用 `History Guard`）。
+本文档是 **HistorySentry** 项目的核心架构规范、开发流程指南与 Agent 协作准则。任何在此代码库中进行特性开发、缺陷修复或重构的开发者与 AI Agent，均须严格遵守以下约定（注：项目文件夹保持 `HistGuard` 不变，对外产品及项目名统一使用 `HistorySentry`）。
 
 ---
 
 ## 1. 项目定位与核心设计哲学
 
-* **项目名称**：History Guard（浏览历史智能防护与隐私卫士）
+* **项目名称**：HistorySentry（浏览历史智能防护与隐私卫士）
 * **代码库目录**：HistGuard（工作区根目录保持不变）
 * **定位**：纯原生、双内核（Chromium MV3 / Gecko MV3）跨浏览器历史记录即时防护扩展。
 * **三大底线原则**：
@@ -88,7 +88,7 @@ HistGuard/
 
 ## 4. 标准开发与交付工作流 (Workflow SOP)
 
-为避免“版本号通胀（Version Inflation）”，History Guard 严格区分 **“日常迭代开发”** 与 **“阶段性正式发版”** 两套流程：
+为避免“版本号通胀（Version Inflation）”，HistorySentry 严格区分 **“日常迭代开发”** 与 **“阶段性正式发版”** 两套流程：
 
 ```mermaid
 graph TD

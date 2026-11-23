@@ -37,9 +37,9 @@ jobs:
           fi
           echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
           echo "TAG_NAME=$TAG_NAME" >> $GITHUB_OUTPUT
-          echo "CHROME_ZIP=dist/releases/history-guard-chrome-v${VERSION}.zip" >> $GITHUB_OUTPUT
-          echo "FIREFOX_ZIP=dist/releases/history-guard-firefox-v${VERSION}.zip" >> $GITHUB_OUTPUT
-          echo "FIREFOX_XPI=dist/releases/history-guard-firefox-v${VERSION}.xpi" >> $GITHUB_OUTPUT
+          echo "CHROME_ZIP=dist/releases/history-sentry-chrome-v${VERSION}.zip" >> $GITHUB_OUTPUT
+          echo "FIREFOX_ZIP=dist/releases/history-sentry-firefox-v${VERSION}.zip" >> $GITHUB_OUTPUT
+          echo "FIREFOX_XPI=dist/releases/history-sentry-firefox-v${VERSION}.xpi" >> $GITHUB_OUTPUT
 
       - name: Generate Release Notes from CHANGELOG.md
         id: notes
@@ -63,8 +63,8 @@ jobs:
             '',
             '### 📦 安装说明 / Installation Guide',
             '',
-            `- **Chrome / Edge / Brave** (\`history-guard-chrome-v${version}.zip\`): 下载并解压后，打开 \`chrome://extensions\` 或 \`edge://extensions\`，开启右上角 **开发者模式 (Developer mode)**，点击 **加载已解压的扩展程序 (Load unpacked)** 并选择解压文件夹即可。`,
-            `- **Firefox** (\`history-guard-firefox-v${version}.zip\` / \`.xpi\`):`,
+            `- **Chrome / Edge / Brave** (\`history-sentry-chrome-v${version}.zip\`): 下载并解压后，打开 \`chrome://extensions\` 或 \`edge://extensions\`，开启右上角 **开发者模式 (Developer mode)**，点击 **加载已解压的扩展程序 (Load unpacked)** 并选择解压文件夹即可。`,
+            `- **Firefox** (\`history-sentry-firefox-v${version}.zip\` / \`.xpi\`):`,
             '  - 正式版 Firefox：打开 `about:debugging#/runtime/this-firefox` -> 点击 **临时载入附加组件** -> 选择 `.zip` 或 `.xpi` 文件；',
             '  - Firefox Developer Edition / Nightly（或关闭签名校验的浏览器）：可直接将 `.xpi` 文件拖入浏览器窗口安装。'
           ].join('\n');
@@ -81,7 +81,7 @@ jobs:
       - name: Create GitHub Release & Upload Packages
         uses: softprops/action-gh-release@v2
         with:
-          name: History Guard v${{ steps.package.outputs.VERSION }}
+          name: HistorySentry v${{ steps.package.outputs.VERSION }}
           tag_name: ${{ steps.package.outputs.TAG_NAME }}
           body_path: ${{ runner.temp }}/release-notes.md
           files: |
