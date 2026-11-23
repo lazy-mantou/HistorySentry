@@ -5,12 +5,12 @@
 
 export default {
   app: {
-    name: 'History Guard',
-    consoleTitle: 'Tableau de bord History Guard',
+    name: 'HistorySentry',
+    consoleTitle: 'Tableau de bord HistorySentry',
     consoleSubtitle: 'Gestion intelligente de l\'historique et protection automatique de la vie privée'
   },
   popup: {
-    title: 'History Guard - Gestionnaire d\'historique',
+    title: 'HistorySentry - Gestionnaire d\'historique',
     silentBtn: 'Sans trace 30 min',
     silentBtnParam: 'Sans trace {duration}',
     silentBtnActive: '{time} Sans trace',
@@ -74,8 +74,8 @@ export default {
     toastRuleRemoved: 'Règle de protection [{rule}] supprimée'
   },
   options: {
-    title: 'History Guard - Gestionnaire d\'historique et tableau de bord',
-    brandTitle: 'Tableau de bord History Guard',
+    title: 'HistorySentry - Gestionnaire d\'historique et tableau de bord',
+    brandTitle: 'Tableau de bord HistorySentry',
     brandSubtitle: 'Gestion intelligente de l\'historique et protection automatique de la vie privée',
     statActiveRules: 'Règles actives',
     statTotalHits: 'Visites protégées',
@@ -220,7 +220,7 @@ export default {
     chunk30: '30 éléments/lot',
     chunk50: '50 éléments/lot',
     chunkWarningTitle: '⚠️ Avertissement : Modifier la limite de simultanéité',
-    chunkWarningDesc: 'Ne modifiez pas ce paramètre sauf absolue nécessité ! History Guard utilise par défaut le mode adaptatif automatique. La modification peut provoquer :',
+    chunkWarningDesc: 'Ne modifiez pas ce paramètre sauf absolue nécessité ! HistorySentry utilise par défaut le mode adaptatif automatique. La modification peut provoquer :',
     chunkWarningIssue1: 'Blocage de base Firefox : Places SQLite utilise un verrou d’écriture unique. Une simultanéité trop forte peut bloquer la base et figer le navigateur.',
     chunkWarningIssue2: 'Surcharges et saccades : Une concurrence excessive fait grimper les E/S disque, entraînant des gels temporaires pendant la navigation.',
     chunkWarningRecommendation: 'Nous vous conseillons vivement de conserver le mode « Adaptatif automatique » pour un équilibre idéal entre vitesse et stabilité.',
@@ -323,11 +323,11 @@ export default {
     statsRulesHitsUnit: '{count} fois'
   },
   toolbar: {
-    tooltipProtected: 'History Guard : Protégé (Enregistrement de l\'historique désactivé{ruleText})',
+    tooltipProtected: 'HistorySentry : Protégé (Enregistrement de l\'historique désactivé{ruleText})',
     tooltipProtectedRuleLabel: ' - règle : {pattern}',
-    tooltipTraceFree: 'History Guard : Mode sans trace actif (Enregistrement global en pause)',
-    tooltipRecording: 'History Guard : Enregistrement de l\'historique (Cliquer pour protéger)',
-    tooltipInternal: 'History Guard : Page interne du navigateur',
-    tooltipPaused: 'History Guard : Protection en pause (L\'historique est enregistré)'
+    tooltipTraceFree: 'HistorySentry : Mode sans trace actif (Enregistrement global en pause)',
+    tooltipRecording: 'HistorySentry : Enregistrement de l\'historique (Cliquer pour protéger)',
+    tooltipInternal: 'HistorySentry : Page interne du navigateur',
+    tooltipPaused: 'HistorySentry : Protection en pause (L\'historique est enregistré)'
   }
 };

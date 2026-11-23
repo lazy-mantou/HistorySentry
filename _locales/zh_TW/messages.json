@@ -1,14 +1,18 @@
 {
   "appName": {
-    "message": "History Guard - 歷史紀錄智慧管理與防護",
+    "message": "HistorySentry - 歷史紀錄智慧管理與防護",
     "description": "The name of the extension"
+  },
+  "appShortName": {
+    "message": "HistorySentry",
+    "description": "The short name of the extension"
   },
   "appDesc": {
     "message": "輕量級跨瀏覽器歷史紀錄智慧管理與全自動隱私防護",
     "description": "The description of the extension"
   },
   "actionTitle": {
-    "message": "History Guard 隱私管家",
+    "message": "HistorySentry 隱私管家",
     "description": "The default title for the toolbar action button"
   }
 }

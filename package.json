@@ -17,6 +17,11 @@
     "chrome",
     "firefox"
   ],
-  "author": "History Guard Team",
+  "author": "LazyMantou",
+  "homepage": "https://github.com/lazy-mantou/HistorySentry",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lazy-mantou/HistorySentry.git"
+  },
   "license": "MIT"
 }

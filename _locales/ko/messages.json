@@ -1,14 +1,18 @@
 {
   "appName": {
-    "message": "History Guard - 스마트 방문 기록 관리 및 개인정보 보호",
+    "message": "HistorySentry - 스마트 방문 기록 관리 및 개인정보 보호",
     "description": "The name of the extension"
+  },
+  "appShortName": {
+    "message": "HistorySentry",
+    "description": "The short name of the extension"
   },
   "appDesc": {
     "message": "가볍고 스마트한 방문 기록 관리 및 자동 개인정보 보호",
     "description": "The description of the extension"
   },
   "actionTitle": {
-    "message": "History Guard 개인정보 보호",
+    "message": "HistorySentry 개인정보 보호",
     "description": "The default title for the toolbar action button"
   }
 }

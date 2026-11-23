@@ -5,12 +5,12 @@
 
 export default {
   app: {
-    name: 'History Guard',
-    consoleTitle: 'Dasbor History Guard',
+    name: 'HistorySentry',
+    consoleTitle: 'Dasbor HistorySentry',
     consoleSubtitle: 'Pengelolaan riwayat pintar & perlindungan privasi otomatis'
   },
   popup: {
-    title: 'History Guard - Pengelola Riwayat',
+    title: 'HistorySentry - Pengelola Riwayat',
     silentBtn: 'Bebas Jejak 30m',
     silentBtnParam: 'Bebas Jejak {duration}',
     silentBtnActive: '{time} Bebas Jejak',
@@ -74,8 +74,8 @@ export default {
     toastRuleRemoved: 'Aturan perlindungan [{rule}] dihapus'
   },
   options: {
-    title: 'History Guard - Pengelola Riwayat & Dasbor',
-    brandTitle: 'Dasbor History Guard',
+    title: 'HistorySentry - Pengelola Riwayat & Dasbor',
+    brandTitle: 'Dasbor HistorySentry',
     brandSubtitle: 'Pengelolaan riwayat pintar & perlindungan privasi otomatis',
     statActiveRules: 'Aturan Aktif',
     statTotalHits: 'Kunjungan Terlindungi',
@@ -220,7 +220,7 @@ export default {
     chunk30: '30 item/batch',
     chunk50: '50 item/batch',
     chunkWarningTitle: '⚠️ Peringatan: Ubah Batas Konkurensi',
-    chunkWarningDesc: 'Jangan ubah pengaturan ini kecuali benar-benar diperlukan! History Guard menggunakan "Adaptif Otomatis" secara bawaan. Mengubahnya dapat menyebabkan:',
+    chunkWarningDesc: 'Jangan ubah pengaturan ini kecuali benar-benar diperlukan! HistorySentry menggunakan "Adaptif Otomatis" secara bawaan. Mengubahnya dapat menyebabkan:',
     chunkWarningIssue1: 'Kunci Basis Data Firefox: Places SQLite menggunakan kunci tulis tunggal. Konkurensi tinggi memicu error database terkunci dan membekukan peramban.',
     chunkWarningIssue2: 'Lonjakan Beban & Patah-patah: Konkurensi berlebih membebani disk dan CPU, menimbulkan penurunan frame saat browsing.',
     chunkWarningRecommendation: 'Sangat disarankan untuk tetap pada "Adaptif Otomatis" demi perpaduan optimal antara kecepatan dan stabilitas.',
@@ -323,11 +323,11 @@ export default {
     statsRulesHitsUnit: '{count} kali'
   },
   toolbar: {
-    tooltipProtected: 'History Guard: Dilindungi (Pencatatan riwayat dinonaktifkan{ruleText})',
+    tooltipProtected: 'HistorySentry: Dilindungi (Pencatatan riwayat dinonaktifkan{ruleText})',
     tooltipProtectedRuleLabel: ' - aturan: {pattern}',
-    tooltipTraceFree: 'History Guard: Mode bebas jejak aktif (Pencatatan riwayat global dijeda)',
-    tooltipRecording: 'History Guard: Mencatat riwayat (Klik ikon untuk melindungi)',
-    tooltipInternal: 'History Guard: Halaman internal peramban',
-    tooltipPaused: 'History Guard: Perlindungan dijeda (Riwayat sedang direkam)'
+    tooltipTraceFree: 'HistorySentry: Mode bebas jejak aktif (Pencatatan riwayat global dijeda)',
+    tooltipRecording: 'HistorySentry: Mencatat riwayat (Klik ikon untuk melindungi)',
+    tooltipInternal: 'HistorySentry: Halaman internal peramban',
+    tooltipPaused: 'HistorySentry: Perlindungan dijeda (Riwayat sedang direkam)'
   }
 };

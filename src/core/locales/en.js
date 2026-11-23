@@ -5,12 +5,12 @@
 
 export default {
   app: {
-    name: 'History Guard',
-    consoleTitle: 'History Guard Dashboard',
+    name: 'HistorySentry',
+    consoleTitle: 'HistorySentry Dashboard',
     consoleSubtitle: 'Lightweight smart history management & automatic privacy protection'
   },
   popup: {
-    title: 'History Guard - History Manager',
+    title: 'HistorySentry - History Manager',
     silentBtn: 'Trace-Free 30m',
     silentBtnParam: 'Trace-Free {duration}',
     silentBtnActive: '{time} Trace-Free',
@@ -74,8 +74,8 @@ export default {
     toastRuleRemoved: 'Protection rule [{rule}] removed'
   },
   options: {
-    title: 'History Guard - History Manager & Console',
-    brandTitle: 'History Guard Dashboard',
+    title: 'HistorySentry - History Manager & Console',
+    brandTitle: 'HistorySentry Dashboard',
     brandSubtitle: 'Lightweight smart history management & automatic privacy protection',
     statActiveRules: 'Active Rules',
     statTotalHits: 'Protected Visits',
@@ -220,7 +220,7 @@ export default {
     chunk30: '30 items/slice',
     chunk50: '50 items/slice',
     chunkWarningTitle: '⚠️ Concurrency Limit Modification Warning',
-    chunkWarningDesc: 'Do not modify this unless strictly necessary! History Guard uses "Auto Adaptive" by default, which is deeply tuned for browser engines. Changing it may cause:',
+    chunkWarningDesc: 'Do not modify this unless strictly necessary! HistorySentry uses "Auto Adaptive" by default, which is deeply tuned for browser engines. Changing it may cause:',
     chunkWarningIssue1: 'Firefox DB Lockups: Firefox Places SQLite uses a single-write lock. Higher concurrency easily causes "database is locked" errors and severe freezes.',
     chunkWarningIssue2: 'Resource Spikes & UI Lag: Excessive concurrency spikes process message queues and disk I/O, causing frame drops or temporary freezes while browsing.',
     chunkWarningRecommendation: 'We strongly recommend keeping "Auto Adaptive", which automatically balances maximum throughput with rock-solid stability.',
@@ -323,11 +323,11 @@ export default {
     statsRulesHitsUnit: '{count} hits'
   },
   toolbar: {
-    tooltipProtected: 'History Guard: Protected (History recording disabled{ruleText})',
+    tooltipProtected: 'HistorySentry: Protected (History recording disabled{ruleText})',
     tooltipProtectedRuleLabel: ' - rule: {pattern}',
-    tooltipTraceFree: 'History Guard: Trace-free mode active (Global history tracking paused)',
-    tooltipRecording: 'History Guard: Recording history (Click icon to protect)',
-    tooltipInternal: 'History Guard: Browser internal page',
-    tooltipPaused: 'History Guard: Protection paused (History is being recorded)'
+    tooltipTraceFree: 'HistorySentry: Trace-free mode active (Global history tracking paused)',
+    tooltipRecording: 'HistorySentry: Recording history (Click icon to protect)',
+    tooltipInternal: 'HistorySentry: Browser internal page',
+    tooltipPaused: 'HistorySentry: Protection paused (History is being recorded)'
   }
 };

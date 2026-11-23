@@ -1,14 +1,18 @@
 {
   "appName": {
-    "message": "History Guard - Verlaufsverwaltung & Datenschutz",
+    "message": "HistorySentry - Verlaufsverwaltung & Datenschutz",
     "description": "The name of the extension"
+  },
+  "appShortName": {
+    "message": "HistorySentry",
+    "description": "The short name of the extension"
   },
   "appDesc": {
     "message": "Intelligente Verlaufsverwaltung & automatischer Schutz der Privatsphäre.",
     "description": "The description of the extension"
   },
   "actionTitle": {
-    "message": "History Guard Datenschutz-Wächter",
+    "message": "HistorySentry Datenschutz-Wächter",
     "description": "The default title for the toolbar action button"
   }
 }

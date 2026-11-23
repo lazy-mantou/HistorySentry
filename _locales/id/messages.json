@@ -1,14 +1,18 @@
 {
   "appName": {
-    "message": "History Guard - Pengelola Riwayat & Privasi",
+    "message": "HistorySentry - Pengelola Riwayat & Privasi",
     "description": "The name of the extension"
+  },
+  "appShortName": {
+    "message": "HistorySentry",
+    "description": "The short name of the extension"
   },
   "appDesc": {
     "message": "Pengelolaan riwayat pintar & perlindungan privasi otomatis.",
     "description": "The description of the extension"
   },
   "actionTitle": {
-    "message": "History Guard Pelindung Privasi",
+    "message": "HistorySentry Pelindung Privasi",
     "description": "The default title for the toolbar action button"
   }
 }

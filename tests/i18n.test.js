@@ -182,7 +182,7 @@ describe('i18n - t() 文本翻译与动态参数插值', () => {
   });
 
   it('能正确翻译一级与深层嵌套的字典键', () => {
-    assert.strictEqual(t('app.name'), 'History Guard');
+    assert.strictEqual(t('app.name'), 'HistorySentry');
     assert.strictEqual(t('options.statActiveRules'), '启用规则');
   });
 
@@ -217,17 +217,17 @@ describe('i18n - t() 文本翻译与动态参数插值', () => {
 
   it('支持显式指定 lang 参数，无需切换全局语言状态即可按指定语言输出', () => {
     // 全局当前语言为 zh-CN
-    assert.strictEqual(t('toolbar.tooltipRecording', {}, 'en'), 'History Guard: Recording history (Click icon to protect)');
-    assert.strictEqual(t('toolbar.tooltipRecording', {}, 'zh-CN'), 'History Guard: 正常记录历史 (点击图标可开启防护)');
-    assert.strictEqual(t('toolbar.tooltipRecording', {}, 'ja'), 'History Guard: 履歴を記録中（アイコンをクリックして保護）');
-    assert.strictEqual(t('toolbar.tooltipRecording', {}, 'ko'), 'History Guard: 방문 기록 저장 중 (아이콘을 클릭하여 보호)');
+    assert.strictEqual(t('toolbar.tooltipRecording', {}, 'en'), 'HistorySentry: Recording history (Click icon to protect)');
+    assert.strictEqual(t('toolbar.tooltipRecording', {}, 'zh-CN'), 'HistorySentry: 正常记录历史 (点击图标可开启防护)');
+    assert.strictEqual(t('toolbar.tooltipRecording', {}, 'ja'), 'HistorySentry: 履歴を記録中（アイコンをクリックして保護）');
+    assert.strictEqual(t('toolbar.tooltipRecording', {}, 'ko'), 'HistorySentry: 방문 기록 저장 중 (아이콘을 클릭하여 보호)');
     
     // 测试带插值的规则提示
     const ruleLabelZh = t('toolbar.tooltipProtectedRuleLabel', { pattern: 'youtube.com' }, 'zh-CN');
-    assert.strictEqual(t('toolbar.tooltipProtected', { ruleText: ruleLabelZh }, 'zh-CN'), 'History Guard: 当前页面处于防护中 (不记录历史 - 规则: youtube.com)');
+    assert.strictEqual(t('toolbar.tooltipProtected', { ruleText: ruleLabelZh }, 'zh-CN'), 'HistorySentry: 当前页面处于防护中 (不记录历史 - 规则: youtube.com)');
 
     const ruleLabelEn = t('toolbar.tooltipProtectedRuleLabel', { pattern: 'youtube.com' }, 'en');
-    assert.strictEqual(t('toolbar.tooltipProtected', { ruleText: ruleLabelEn }, 'en'), 'History Guard: Protected (History recording disabled - rule: youtube.com)');
+    assert.strictEqual(t('toolbar.tooltipProtected', { ruleText: ruleLabelEn }, 'en'), 'HistorySentry: Protected (History recording disabled - rule: youtube.com)');
   });
 
   it('不存在的键应当直接安全回退返回 key 本身', () => {
@@ -456,6 +456,7 @@ describe('manifest.json 国际化规范与资源完整性校验', () => {
     for (const manifest of [chromeManifest, firefoxManifest]) {
       assert.strictEqual(manifest.default_locale, 'zh_CN');
       assert.strictEqual(manifest.name, '__MSG_appName__');
+      assert.strictEqual(manifest.short_name, '__MSG_appShortName__');
       assert.strictEqual(manifest.description, '__MSG_appDesc__');
       assert.strictEqual(manifest.action.default_title, '__MSG_actionTitle__');
     }
@@ -463,7 +464,7 @@ describe('manifest.json 国际化规范与资源完整性校验', () => {
 
   it('_locales 必须包含完整的多语言 messages.json 且各字典键结构对齐', () => {
     const expectedLocales = ['zh_CN', 'zh_TW', 'en', 'ja', 'ko', 'es', 'fr', 'de', 'ru', 'pt_BR', 'pt_PT', 'id', 'ar'];
-    const requiredKeys = ['appName', 'appDesc', 'actionTitle'];
+    const requiredKeys = ['appName', 'appShortName', 'appDesc', 'actionTitle'];
 
     for (const locale of expectedLocales) {
       const filePath = path.join(localesDir, locale, 'messages.json');

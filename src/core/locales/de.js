@@ -5,12 +5,12 @@
 
 export default {
   app: {
-    name: 'History Guard',
-    consoleTitle: 'History Guard Dashboard',
+    name: 'HistorySentry',
+    consoleTitle: 'HistorySentry Dashboard',
     consoleSubtitle: 'Intelligente Verlaufsverwaltung & automatischer Schutz der Privatsphäre'
   },
   popup: {
-    title: 'History Guard - Verlaufs-Manager',
+    title: 'HistorySentry - Verlaufs-Manager',
     silentBtn: '30 Min. spurenfrei',
     silentBtnParam: '{duration} spurenfrei',
     silentBtnActive: '{time} Spurenfrei',
@@ -74,8 +74,8 @@ export default {
     toastRuleRemoved: 'Schutzregel [{rule}] entfernt'
   },
   options: {
-    title: 'History Guard - Verlauf-Manager & Dashboard',
-    brandTitle: 'History Guard Dashboard',
+    title: 'HistorySentry - Verlauf-Manager & Dashboard',
+    brandTitle: 'HistorySentry Dashboard',
     brandSubtitle: 'Intelligente Verlaufsverwaltung & automatischer Schutz der Privatsphäre',
     statActiveRules: 'Aktive Regeln',
     statTotalHits: 'Geschützte Besuche',
@@ -220,7 +220,7 @@ export default {
     chunk30: '30 Einträge/Stapel',
     chunk50: '50 Einträge/Stapel',
     chunkWarningTitle: '⚠️ Warnung: Parallelitätslimit ändern',
-    chunkWarningDesc: 'Ändern Sie diese Einstellung nur bei dringendem Bedarf! History Guard ist im Modus „Automatisch adaptiv“ optimal abgestimmt. Eine manuelle Änderung kann Folgendes bewirken:',
+    chunkWarningDesc: 'Ändern Sie diese Einstellung nur bei dringendem Bedarf! HistorySentry ist im Modus „Automatisch adaptiv“ optimal abgestimmt. Eine manuelle Änderung kann Folgendes bewirken:',
     chunkWarningIssue1: 'Firefox-Datenbankblockade: Places SQLite nutzt eine Einzelschreibsperre. Zu hohe Parallelität führt leicht zu Sperrfehlern und Browser-Einfrieren.',
     chunkWarningIssue2: 'Hohe Last & Ruckler: Übermäßige Parallelität treibt Festplatten-I/O in die Höhe, was zu Rucklern beim normalen Surfen führen kann.',
     chunkWarningRecommendation: 'Wir empfehlen dringend, „Automatisch adaptiv“ beizubehalten, um maximale Geschwindigkeit und höchste Stabilität zu sichern.',
@@ -323,11 +323,11 @@ export default {
     statsRulesHitsUnit: '{count} Mal'
   },
   toolbar: {
-    tooltipProtected: 'History Guard: Geschützt (Verlaufsaufzeichnung deaktiviert{ruleText})',
+    tooltipProtected: 'HistorySentry: Geschützt (Verlaufsaufzeichnung deaktiviert{ruleText})',
     tooltipProtectedRuleLabel: ' - Regel: {pattern}',
-    tooltipTraceFree: 'History Guard: Spurenfreier Modus aktiv (Verlaufsaufzeichnung pausiert)',
-    tooltipRecording: 'History Guard: Verlauf wird aufgezeichnet (Klicken zum Schützen)',
-    tooltipInternal: 'History Guard: Interne Browserseite',
-    tooltipPaused: 'History Guard: Schutz pausiert (Verlauf wird aufgezeichnet)'
+    tooltipTraceFree: 'HistorySentry: Spurenfreier Modus aktiv (Verlaufsaufzeichnung pausiert)',
+    tooltipRecording: 'HistorySentry: Verlauf wird aufgezeichnet (Klicken zum Schützen)',
+    tooltipInternal: 'HistorySentry: Interne Browserseite',
+    tooltipPaused: 'HistorySentry: Schutz pausiert (Verlauf wird aufgezeichnet)'
   }
 };

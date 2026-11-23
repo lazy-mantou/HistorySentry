@@ -44,4 +44,4 @@ If we make changes to this policy, we will update the "Last Updated" date at the
 
 ### 6. Contact & Source Code
 History Guard is open-source. If you have questions about this Privacy Policy, you can open an issue or reach out via our GitHub repository:
-- **Repository:** https://github.com/lazy-mantou/HistoryGuard
+- **Repository:** https://github.com/lazy-mantou/HistorySentry

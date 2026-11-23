@@ -5,12 +5,12 @@
 
 export default {
   app: {
-    name: 'History Guard',
-    consoleTitle: 'History Guard 대시보드',
+    name: 'HistorySentry',
+    consoleTitle: 'HistorySentry 대시보드',
     consoleSubtitle: '가볍고 스마트한 방문 기록 관리 및 자동 개인정보 보호'
   },
   popup: {
-    title: 'History Guard - 방문 기록 보호',
+    title: 'HistorySentry - 방문 기록 보호',
     silentBtn: '30분 흔적 없이 탐색',
     silentBtnParam: '{duration} 흔적 없음',
     silentBtnActive: '{time} 흔적 없음',
@@ -74,8 +74,8 @@ export default {
     toastRuleRemoved: '보호 규칙 [{rule}]이(가) 제거되었습니다'
   },
   options: {
-    title: 'History Guard - 방문 기록 관리 및 대시보드',
-    brandTitle: 'History Guard 대시보드',
+    title: 'HistorySentry - 방문 기록 관리 및 대시보드',
+    brandTitle: 'HistorySentry 대시보드',
     brandSubtitle: '가볍고 스마트한 방문 기록 관리 및 자동 개인정보 보호',
     statActiveRules: '활성 규칙',
     statTotalHits: '보호된 방문',
@@ -220,7 +220,7 @@ export default {
     chunk30: '30개/묶음',
     chunk50: '50개/묶음',
     chunkWarningTitle: '⚠️ 동시성 제한 변경 경고',
-    chunkWarningDesc: '꼭 필요한 경우가 아니라면 이 설정을 변경하지 마세요! History Guard는 브라우저 엔진에 맞춰 "자동 적응"으로 최적화되어 있습니다. 변경 시 다음 문제가 발생할 수 있습니다:',
+    chunkWarningDesc: '꼭 필요한 경우가 아니라면 이 설정을 변경하지 마세요! HistorySentry는 브라우저 엔진에 맞춰 "자동 적응"으로 최적화되어 있습니다. 변경 시 다음 문제가 발생할 수 있습니다:',
     chunkWarningIssue1: 'Firefox DB 잠금 오류: Firefox의 Places SQLite는 단일 쓰기 잠금을 사용합니다. 동시성이 너무 높으면 DB 잠금 오류가 발생하여 브라우저가 심각하게 멈출 수 있습니다.',
     chunkWarningIssue2: '시스템 부하 및 렉 발생: 지나친 동시성은 디스크 I/O를 급증시켜 정상적인 웹 서핑 도중 화면 끊김이나 버벅임을 유발할 수 있습니다.',
     chunkWarningRecommendation: '최상의 속도와 완벽한 안정성을 유지하기 위해 "자동 적응"을 유지할 것을 적극 권장합니다.',
@@ -323,11 +323,11 @@ export default {
     statsRulesHitsUnit: '{count}회'
   },
   toolbar: {
-    tooltipProtected: 'History Guard: 보호 중 (방문 기록 저장이 비활성화됨{ruleText})',
+    tooltipProtected: 'HistorySentry: 보호 중 (방문 기록 저장이 비활성화됨{ruleText})',
     tooltipProtectedRuleLabel: ' - 규칙: {pattern}',
-    tooltipTraceFree: 'History Guard: 흔적 없는 모드 활성화됨 (전체 방문 기록 일시 중지)',
-    tooltipRecording: 'History Guard: 방문 기록 저장 중 (아이콘을 클릭하여 보호)',
-    tooltipInternal: 'History Guard: 브라우저 내부 페이지 (기록되지 않음)',
-    tooltipPaused: 'History Guard: 보호 일시 중지됨 (방문 기록이 정상적으로 기록됩니다)'
+    tooltipTraceFree: 'HistorySentry: 흔적 없는 모드 활성화됨 (전체 방문 기록 일시 중지)',
+    tooltipRecording: 'HistorySentry: 방문 기록 저장 중 (아이콘을 클릭하여 보호)',
+    tooltipInternal: 'HistorySentry: 브라우저 내부 페이지 (기록되지 않음)',
+    tooltipPaused: 'HistorySentry: 보호 일시 중지됨 (방문 기록이 정상적으로 기록됩니다)'
   }
 };

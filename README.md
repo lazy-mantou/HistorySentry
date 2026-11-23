@@ -1,8 +1,9 @@
-# 🛡️ History Guard - Intelligent Cross-Browser History Protection & Privacy Guardian
+# 🛡️ HistorySentry — Auto History Cleaner & Incognito Rules
 
 <p align="center">
   <b>English</b> •
-  <a href="README_zh.md">简体中文</a>
+  <a href="README_zh.md">简体中文</a> •
+  <a href="https://github.com/lazy-mantou/HistorySentry">GitHub</a>
 </p>
 
 <p align="center">
@@ -14,7 +15,19 @@
   <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License MIT" />
 </p>
 
-> **History Guard** is a pure-native, cross-browser (Chrome, Edge, Brave, and Firefox) history protection and privacy defense extension. Engineered with a unified **Browser Adapter Pattern**, it decouples browser internals across Chromium and Gecko engines. History Guard provides intelligent zero-input rule generation via URL hierarchy parsing, sub-millisecond instant history wiping upon visit, anti-deadlock Places SQLite flow control, and a one-click 30-minute temporary incognito mode.
+<p align="center">
+  <a href="https://chromewebstore.google.com/detail/khhoebefmcagfhninjncpjaljdanllki">
+    <img src="https://img.shields.io/badge/Chrome%20Web%20Store-Install-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Chrome Web Store" />
+  </a>
+  <a href="https://microsoftedge.microsoft.com/addons/detail/mdanoeohlnfmbaonjhjkhfbidkfhebel">
+    <img src="https://img.shields.io/badge/Edge%20Add--ons-Install-0078D7?style=flat-square&logo=microsoftedge&logoColor=white" alt="Microsoft Edge Add-ons" />
+  </a>
+  <a href="https://addons.mozilla.org/zh-CN/firefox/addon/historyguard/">
+    <img src="https://img.shields.io/badge/Firefox%20Add--ons-Install-FF7139?style=flat-square&logo=firefoxbrowser&logoColor=white" alt="Firefox Add-ons" />
+  </a>
+</p>
+
+> **HistorySentry** is a pure-native, cross-browser (Chrome, Edge, Brave, and Firefox) history protection and privacy defense extension. Engineered with a unified **Browser Adapter Pattern**, it decouples browser internals across Chromium and Gecko engines. HistorySentry provides intelligent zero-input rule generation via URL hierarchy parsing, sub-millisecond instant history wiping upon visit, anti-deadlock Places SQLite flow control, and a one-click 30-minute temporary incognito mode.
 
 ---
 
@@ -84,8 +97,13 @@ HistGuard/
 
 ## 🚀 Build & Installation
 
+### 🛒 Install from Browser Stores
+- [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install-4285F4?style=flat-square&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/khhoebefmcagfhninjncpjaljdanllki) — [Chrome Web Store](https://chromewebstore.google.com/detail/khhoebefmcagfhninjncpjaljdanllki)
+- [![Microsoft Edge Add-ons](https://img.shields.io/badge/Edge%20Add--ons-Install-0078D7?style=flat-square&logo=microsoftedge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/mdanoeohlnfmbaonjhjkhfbidkfhebel) — [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/mdanoeohlnfmbaonjhjkhfbidkfhebel)
+- [![Firefox Add-ons](https://img.shields.io/badge/Firefox%20Add--ons-Install-FF7139?style=flat-square&logo=firefoxbrowser&logoColor=white)](https://addons.mozilla.org/zh-CN/firefox/addon/historyguard/) — [Firefox Add-ons (AMO)](https://addons.mozilla.org/zh-CN/firefox/addon/historyguard/)
+
 ### 1. Build the Extension
-History Guard adheres strictly to a **zero third-party dependency** standard. It builds using native Node.js—**no** `npm install` required:
+HistorySentry adheres strictly to a **zero third-party dependency** standard. It builds using native Node.js—**no** `npm install` required:
 ```bash
 node build.js
 # Or via npm

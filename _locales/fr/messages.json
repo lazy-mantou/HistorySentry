@@ -1,14 +1,18 @@
 {
   "appName": {
-    "message": "History Guard - Gestion d'historique et vie privée",
+    "message": "HistorySentry - Gestion d'historique et vie privée",
     "description": "The name of the extension"
+  },
+  "appShortName": {
+    "message": "HistorySentry",
+    "description": "The short name of the extension"
   },
   "appDesc": {
     "message": "Gestion intelligente de l'historique et protection automatique de la vie privée.",
     "description": "The description of the extension"
   },
   "actionTitle": {
-    "message": "History Guard Protection de la vie privée",
+    "message": "HistorySentry Protection de la vie privée",
     "description": "The default title for the toolbar action button"
   }
 }

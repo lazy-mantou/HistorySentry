@@ -1,14 +1,18 @@
 {
   "appName": {
-    "message": "History Guard - Защита истории и приватность",
+    "message": "HistorySentry - Защита истории и приватность",
     "description": "The name of the extension"
+  },
+  "appShortName": {
+    "message": "HistorySentry",
+    "description": "The short name of the extension"
   },
   "appDesc": {
     "message": "Умное управление историей и автоматическая защита конфиденциальности.",
     "description": "The description of the extension"
   },
   "actionTitle": {
-    "message": "History Guard Защита приватности",
+    "message": "HistorySentry Защита приватности",
     "description": "The default title for the toolbar action button"
   }
 }

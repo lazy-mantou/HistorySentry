@@ -5,12 +5,12 @@
 
 export default {
   app: {
-    name: 'History Guard',
-    consoleTitle: 'Panel de control History Guard',
+    name: 'HistorySentry',
+    consoleTitle: 'Panel de control HistorySentry',
     consoleSubtitle: 'Gestión inteligente del historial y protección automática de la privacidad'
   },
   popup: {
-    title: 'History Guard - Gestión del historial',
+    title: 'HistorySentry - Gestión del historial',
     silentBtn: 'Sin rastro 30 min',
     silentBtnParam: 'Sin rastro {duration}',
     silentBtnActive: '{time} Sin rastro',
@@ -74,8 +74,8 @@ export default {
     toastRuleRemoved: 'Regla de protección [{rule}] eliminada'
   },
   options: {
-    title: 'History Guard - Panel de control y gestor de historial',
-    brandTitle: 'Panel de control History Guard',
+    title: 'HistorySentry - Panel de control y gestor de historial',
+    brandTitle: 'Panel de control HistorySentry',
     brandSubtitle: 'Gestión inteligente del historial y protección automática de la privacidad',
     statActiveRules: 'Reglas activas',
     statTotalHits: 'Visitas protegidas',
@@ -220,7 +220,7 @@ export default {
     chunk30: '30 elementos/lote',
     chunk50: '50 elementos/lote',
     chunkWarningTitle: '⚠️ Advertencia: Modificar límite de concurrencia',
-    chunkWarningDesc: '¡No modifiques este ajuste a menos que sea estrictamente necesario! History Guard usa "Adaptación automática" optimizada. Cambiarlo puede causar:',
+    chunkWarningDesc: '¡No modifiques este ajuste a menos que sea estrictamente necesario! HistorySentry usa "Adaptación automática" optimizada. Cambiarlo puede causar:',
     chunkWarningIssue1: 'Bloqueo en Firefox: Places SQLite utiliza bloqueo de escritura única. Una concurrencia alta puede bloquear la base de datos y congelar el navegador.',
     chunkWarningIssue2: 'Sobrecarga y tirones: La concurrencia excesiva satura el disco y la CPU, provocando tirones o congelamientos al navegar por la web.',
     chunkWarningRecommendation: 'Recomendamos encarecidamente mantener "Adaptación automática" para un equilibrio perfecto entre velocidad y estabilidad.',
@@ -323,11 +323,11 @@ export default {
     statsRulesHitsUnit: '{count} veces'
   },
   toolbar: {
-    tooltipProtected: 'History Guard: Protegido (Registro de historial deshabilitado{ruleText})',
+    tooltipProtected: 'HistorySentry: Protegido (Registro de historial deshabilitado{ruleText})',
     tooltipProtectedRuleLabel: ' - regla: {pattern}',
-    tooltipTraceFree: 'History Guard: Modo sin rastro activo (Registro global pausado)',
-    tooltipRecording: 'History Guard: Registrando historial (Clic para proteger)',
-    tooltipInternal: 'History Guard: Página interna del navegador',
-    tooltipPaused: 'History Guard: Protección pausada (El historial se está grabando)'
+    tooltipTraceFree: 'HistorySentry: Modo sin rastro activo (Registro global pausado)',
+    tooltipRecording: 'HistorySentry: Registrando historial (Clic para proteger)',
+    tooltipInternal: 'HistorySentry: Página interna del navegador',
+    tooltipPaused: 'HistorySentry: Protección pausada (El historial se está grabando)'
   }
 };

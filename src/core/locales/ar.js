@@ -5,12 +5,12 @@
 
 export default {
   app: {
-    name: 'History Guard',
-    consoleTitle: 'لوحة تحكم History Guard',
+    name: 'HistorySentry',
+    consoleTitle: 'لوحة تحكم HistorySentry',
     consoleSubtitle: 'إدارة ذكية لسجل التصفح وحماية تلقائية لخصوصيتك'
   },
   popup: {
-    title: 'History Guard - مدير سجل التصفح',
+    title: 'HistorySentry - مدير سجل التصفح',
     silentBtn: 'بدون أثر 30 دقيقة',
     silentBtnParam: '{duration} بدون أثر',
     silentBtnActive: '{time} بدون أثر',
@@ -74,8 +74,8 @@ export default {
     toastRuleRemoved: 'تمت إزالة قاعدة الحماية [{rule}]'
   },
   options: {
-    title: 'History Guard - مدير السجل ولوحة التحكم',
-    brandTitle: 'لوحة تحكم History Guard',
+    title: 'HistorySentry - مدير السجل ولوحة التحكم',
+    brandTitle: 'لوحة تحكم HistorySentry',
     brandSubtitle: 'إدارة ذكية لسجل التصفح وحماية تلقائية لخصوصيتك',
     statActiveRules: 'القواعد النشطة',
     statTotalHits: 'الزيارات المحمية',
@@ -220,7 +220,7 @@ export default {
     chunk30: '30 عنصر/دفعة',
     chunk50: '50 عنصر/دفعة',
     chunkWarningTitle: '⚠️ تحذير: تعديل حد التزامن',
-    chunkWarningDesc: 'يرجى عدم تعديل هذا الإعداد إلا للضرورة القصوى! يعتمد History Guard وضع التكيف التلقائي المحسن. التغيير قد يسبب:',
+    chunkWarningDesc: 'يرجى عدم تعديل هذا الإعداد إلا للضرورة القصوى! يعتمد HistorySentry وضع التكيف التلقائي المحسن. التغيير قد يسبب:',
     chunkWarningIssue1: 'قفل قاعدة بيانات Firefox: يستخدم Places SQLite قفل كتابة فردي. التزامن المرتفع قد يؤدي لخطأ قفل القاعدة وتجميد المتصفح.',
     chunkWarningIssue2: 'استهلاك الموارد والبطء: التزامن الزائد يرفع ضغط القرص والمعالج مما يسبب بطء تصفح المواقع الأخرى.',
     chunkWarningRecommendation: 'نوصي بشدة بالاحتفاظ بـ "التكيف التلقائي" لتحقيق أفضل توازن بين السرعة الفائقة والاستقرار التام.',
@@ -323,11 +323,11 @@ export default {
     statsRulesHitsUnit: '{count} مرة'
   },
   toolbar: {
-    tooltipProtected: 'History Guard: محمي (تم إيقاف تسجيل سجل التصفح{ruleText})',
+    tooltipProtected: 'HistorySentry: محمي (تم إيقاف تسجيل سجل التصفح{ruleText})',
     tooltipProtectedRuleLabel: ' - القاعدة: {pattern}',
-    tooltipTraceFree: 'History Guard: وضع بدون أثر نشط (إيقاف مؤقت لتسجيل السجل)',
-    tooltipRecording: 'History Guard: يتم تسجيل السجل (انقر على الأيقونة للحماية)',
-    tooltipInternal: 'History Guard: صفحة داخلية في المتصفح',
-    tooltipPaused: 'History Guard: الحماية متوقفة مؤقتًا (يتم تسجيل السجل)'
+    tooltipTraceFree: 'HistorySentry: وضع بدون أثر نشط (إيقاف مؤقت لتسجيل السجل)',
+    tooltipRecording: 'HistorySentry: يتم تسجيل السجل (انقر على الأيقونة للحماية)',
+    tooltipInternal: 'HistorySentry: صفحة داخلية في المتصفح',
+    tooltipPaused: 'HistorySentry: الحماية متوقفة مؤقتًا (يتم تسجيل السجل)'
   }
 };

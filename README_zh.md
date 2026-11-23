@@ -1,8 +1,9 @@
-# 🛡️ History Guard - 智能跨浏览器历史记录即时防护与隐私卫士
+# 🛡️ HistorySentry — 自动历史清理与无痕规则
 
 <p align="center">
   <a href="README.md">English</a> •
-  <b>简体中文</b>
+  <b>简体中文</b> •
+  <a href="https://github.com/lazy-mantou/HistorySentry">GitHub</a>
 </p>
 
 <p align="center">
@@ -14,7 +15,19 @@
   <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License MIT" />
 </p>
 
-> **History Guard** 是一款专为重视隐私安全与浏览效率的用户打造的纯原生、跨浏览器（Chrome / Edge / Brave / Firefox）历史记录即时防护扩展。采用**统一抽象适配器层（Adapter Pattern）**实现双内核 API 无缝解耦，支持基于 URL 智能逐级拆解的零输入快速加规、毫秒级实时隐私抹除与 30 分钟临时无痕模式。
+<p align="center">
+  <a href="https://chromewebstore.google.com/detail/khhoebefmcagfhninjncpjaljdanllki">
+    <img src="https://img.shields.io/badge/Chrome%20%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97-%E7%AB%8B%E5%8D%B3%E5%AE%89%E8%A3%85-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Chrome 应用商店" />
+  </a>
+  <a href="https://microsoftedge.microsoft.com/addons/detail/mdanoeohlnfmbaonjhjkhfbidkfhebel">
+    <img src="https://img.shields.io/badge/Edge%20%E5%A4%96%E6%8E%9B%E7%A8%8B%E5%BA%8F-%E7%AB%8B%E5%8D%B3%E5%AE%89%E8%A3%85-0078D7?style=flat-square&logo=microsoftedge&logoColor=white" alt="Edge 外接程序" />
+  </a>
+  <a href="https://addons.mozilla.org/zh-CN/firefox/addon/historyguard/">
+    <img src="https://img.shields.io/badge/Firefox%20%E9%99%84%E5%8A%A0%E7%BB%84%E4%BB%B6-%E7%AB%8B%E5%8D%B3%E5%AE%89%E8%A3%85-FF7139?style=flat-square&logo=firefoxbrowser&logoColor=white" alt="Firefox 附加组件" />
+  </a>
+</p>
+
+> **HistorySentry** 是一款专为重视隐私安全与浏览效率的用户打造的纯原生、跨浏览器（Chrome / Edge / Brave / Firefox）历史记录即时防护扩展。采用**统一抽象适配器层（Adapter Pattern）**实现双内核 API 无缝解耦，支持基于 URL 智能逐级拆解的零输入快速加规、毫秒级实时隐私抹除与 30 分钟临时无痕模式。
 
 ---
 
@@ -83,6 +96,11 @@ HistGuard/
 ---
 
 ## 🚀 构建与安装使用
+
+### 🛒 从浏览器插件市场安装
+- [![Chrome 应用商店](https://img.shields.io/badge/Chrome%20%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97-%E7%AB%8B%E5%8D%B3%E5%AE%89%E8%A3%85-4285F4?style=flat-square&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/khhoebefmcagfhninjncpjaljdanllki) — [Chrome 应用商店](https://chromewebstore.google.com/detail/khhoebefmcagfhninjncpjaljdanllki)
+- [![Edge 外接程序](https://img.shields.io/badge/Edge%20%E5%A4%96%E6%8E%9B%E7%A8%8B%E5%BA%8F-%E7%AB%8B%E5%8D%B3%E5%AE%89%E8%A3%85-0078D7?style=flat-square&logo=microsoftedge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/mdanoeohlnfmbaonjhjkhfbidkfhebel) — [Microsoft Edge 外接程序](https://microsoftedge.microsoft.com/addons/detail/mdanoeohlnfmbaonjhjkhfbidkfhebel)
+- [![Firefox 附加组件](https://img.shields.io/badge/Firefox%20%E9%99%84%E5%8A%A0%E7%BB%84%E4%BB%B6-%E7%AB%8B%E5%8D%B3%E5%AE%89%E8%A3%85-FF7139?style=flat-square&logo=firefoxbrowser&logoColor=white)](https://addons.mozilla.org/zh-CN/firefox/addon/historyguard/) — [Firefox 附加组件 (AMO)](https://addons.mozilla.org/zh-CN/firefox/addon/historyguard/)
 
 ### 1. 运行构建
 本项目坚持**零第三方外部依赖**，使用纯原生 Node.js 构建，**无需** `npm install` 任何库：

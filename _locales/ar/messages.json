@@ -1,14 +1,18 @@
 {
   "appName": {
-    "message": "History Guard - إدارة سجل التصفح وحماية الخصوصية",
+    "message": "HistorySentry - إدارة سجل التصفح وحماية الخصوصية",
     "description": "The name of the extension"
+  },
+  "appShortName": {
+    "message": "HistorySentry",
+    "description": "The short name of the extension"
   },
   "appDesc": {
     "message": "إدارة ذكية لسجل التصفح وحماية تلقائية لخصوصيتك.",
     "description": "The description of the extension"
   },
   "actionTitle": {
-    "message": "History Guard حارس الخصوصية",
+    "message": "HistorySentry حارس الخصوصية",
     "description": "The default title for the toolbar action button"
   }
 }

@@ -1,14 +1,18 @@
 {
   "appName": {
-    "message": "History Guard - Smart History Protection & Privacy Guard",
+    "message": "HistorySentry — Auto History Cleaner & Incognito Rules",
     "description": "The name of the extension"
+  },
+  "appShortName": {
+    "message": "HistorySentry",
+    "description": "The short name of the extension"
   },
   "appDesc": {
     "message": "Lightweight cross-browser history management & automatic privacy protection.",
     "description": "The description of the extension"
   },
   "actionTitle": {
-    "message": "History Guard Privacy Guard",
+    "message": "HistorySentry Privacy Guard",
     "description": "The default title for the toolbar action button"
   }
 }

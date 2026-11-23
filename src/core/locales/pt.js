@@ -5,12 +5,12 @@
 
 export default {
   app: {
-    name: 'History Guard',
-    consoleTitle: 'Painel de Controle History Guard',
+    name: 'HistorySentry',
+    consoleTitle: 'Painel de Controle HistorySentry',
     consoleSubtitle: 'Gerenciamento inteligente de histórico e proteção automática de privacidade'
   },
   popup: {
-    title: 'History Guard - Gerenciador de Histórico',
+    title: 'HistorySentry - Gerenciador de Histórico',
     silentBtn: 'Sem Rastros 30 min',
     silentBtnParam: 'Sem Rastros {duration}',
     silentBtnActive: '{time} Sem Rastros',
@@ -74,8 +74,8 @@ export default {
     toastRuleRemoved: 'Regra de proteção [{rule}] removida'
   },
   options: {
-    title: 'History Guard - Gerenciador de Histórico e Painel',
-    brandTitle: 'Painel de Controle History Guard',
+    title: 'HistorySentry - Gerenciador de Histórico e Painel',
+    brandTitle: 'Painel de Controle HistorySentry',
     brandSubtitle: 'Gerenciamento inteligente de histórico e proteção automática de privacidade',
     statActiveRules: 'Regras Ativas',
     statTotalHits: 'Visitas Protegidas',
@@ -220,7 +220,7 @@ export default {
     chunk30: '30 itens/lote',
     chunk50: '50 itens/lote',
     chunkWarningTitle: '⚠️ Aviso: Modificar limite de simultaneidade',
-    chunkWarningDesc: 'Não modifique esta configuração a menos que estritamente necessário! O History Guard usa "Adaptação Automática". Alterar pode causar:',
+    chunkWarningDesc: 'Não modifique esta configuração a menos que estritamente necessário! O HistorySentry usa "Adaptação Automática". Alterar pode causar:',
     chunkWarningIssue1: 'Travamento no Firefox: O Places SQLite usa bloqueio de gravação único. Simultaneidade alta pode travar o banco de dados e o navegador.',
     chunkWarningIssue2: 'Sobrecarga de CPU e I/O: Concorrência excessiva sobrecarrega disco e processos, causando travamentos durante a navegação normal.',
     chunkWarningRecommendation: 'Recomendamos fortemente manter a "Adaptação Automática", que equilibra velocidade máxima com estabilidade robusta.',
@@ -323,11 +323,11 @@ export default {
     statsRulesHitsUnit: '{count} vezes'
   },
   toolbar: {
-    tooltipProtected: 'History Guard: Protegido (Gravação de histórico desativada{ruleText})',
+    tooltipProtected: 'HistorySentry: Protegido (Gravação de histórico desativada{ruleText})',
     tooltipProtectedRuleLabel: ' - regra: {pattern}',
-    tooltipTraceFree: 'History Guard: Modo sem rastros ativo (Gravação global pausada)',
-    tooltipRecording: 'History Guard: Gravando histórico (Clique para proteger)',
-    tooltipInternal: 'History Guard: Página interna do navegador',
-    tooltipPaused: 'History Guard: Proteção pausada (O histórico está sendo gravado)'
+    tooltipTraceFree: 'HistorySentry: Modo sem rastros ativo (Gravação global pausada)',
+    tooltipRecording: 'HistorySentry: Gravando histórico (Clique para proteger)',
+    tooltipInternal: 'HistorySentry: Página interna do navegador',
+    tooltipPaused: 'HistorySentry: Proteção pausada (O histórico está sendo gravado)'
   }
 };
